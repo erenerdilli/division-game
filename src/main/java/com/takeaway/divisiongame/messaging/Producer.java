@@ -1,5 +1,6 @@
 package com.takeaway.divisiongame.messaging;
 
+import com.takeaway.divisiongame.gameplay.StaticVariables;
 import com.takeaway.divisiongame.model.GameState;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,8 @@ public class Producer {
     private KafkaTemplate<String, GameState> kafkaTemplate;
 
     public void sendMessage(String message) {
-        this.kafkaTemplate.send(topic, new GameState(1, 50, 1, 0));
+        GameState gameState = new GameState(StaticVariables.PLAYER_NUMBER);
+        this.kafkaTemplate.send(topic, gameState);
     }
 
     @Bean
