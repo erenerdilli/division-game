@@ -1,4 +1,4 @@
-version: '2'
+version: '3.1'
 services:
   zookeeper:
     image: wurstmeister/zookeeper
@@ -12,3 +12,7 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: 127.0.0.1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "test_topic:1:3"
+  app:
+    build: .
+    ports:
+      - "8080:8080"
