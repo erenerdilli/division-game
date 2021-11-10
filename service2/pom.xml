@@ -58,7 +58,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>divisiongame-service1</finalName>
+		<finalName>divisiongame-service2</finalName>
 	</build>
 
 </project>

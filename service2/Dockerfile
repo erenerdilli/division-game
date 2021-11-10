@@ -6,7 +6,7 @@ RUN mvn clean package -Dmaven.test.skip
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 
-COPY --from=MAVEN_BUILD target/divisiongame-service1.jar app.jar
+COPY --from=MAVEN_BUILD target/divisiongame-service2.jar app.jar
 
 EXPOSE 8080
 
