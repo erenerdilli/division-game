@@ -1,9 +1,11 @@
-Make sure Docker Engine is running
+- Clone repository
 
-Run command docker-compose up -d
+- Make sure Docker Engine is running
 
-Run both services seperately via IDE
+- Run command docker-compose up -d
 
-Send a post request to localhost:8080/api/v1/init endpoint
+- Run both services seperately via IDE
+
+- Send a post request to localhost:8080/api/v1/init endpoint
 
 ![Scheme](assets/images/demo.gif)
