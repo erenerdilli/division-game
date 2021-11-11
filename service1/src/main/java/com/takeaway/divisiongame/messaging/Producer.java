@@ -29,6 +29,7 @@ public class Producer {
             e.printStackTrace();
         }
         log.info("Writing object " + gameState.toString() + " to topic " + topic);
+        System.out.println(gameState.toString());
         this.kafkaTemplate.send(topic, gameState);
     }
 

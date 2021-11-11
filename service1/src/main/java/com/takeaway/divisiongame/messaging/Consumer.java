@@ -19,9 +19,12 @@ public class Consumer {
 
         log.info("Consuming object: " + gameState.toString());
         StaticVariables.PLAYER_NUMBER = gameState.getPlayerNumber();
-        this.producer.sendMessage("message");
-        System.out.println(gameState.getPlayerNumber() + ", " + gameState.getModifier() + ", " + gameState.getWinnerIndex());
-        System.out.println(gameState.toString());
+        if (gameState.getWinnerIndex() == 0) {
+            this.producer.sendMessage("message");
+        } else {
+            log.info("End of messaging. Winner index: " + gameState.getWinnerIndex());
+            System.out.println("Game Over. Winner is: " + gameState.getWinnerIndex());
+        }
     }
 
 }
