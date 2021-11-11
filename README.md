@@ -1,9 +1,9 @@
-Make sure Docker Engine is running.
+Make sure Docker Engine is running
 
 Run command docker-compose up -d
 
-Run both services seperately.
+Run both services seperately via IDE
 
-Send a post request to localhost:8080/api/v1/init endpoint.
+Send a post request to localhost:8080/api/v1/init endpoint
 
 ![Scheme](assets/images/demo.gif)
