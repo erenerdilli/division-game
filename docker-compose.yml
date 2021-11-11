@@ -22,13 +22,28 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-#  app:
-#    build: .
-#    image: app
-#    container_name: app
+#  app1:
+#    build:
+#      context: ./service1
+#      dockerfile: Dockerfile
+#    image: app1
+#    container_name: app1
 #    environment:
 #      SPRING_KAFKA_BOOTSTRAPSERVERS: kafka:29092
 #    ports:
 #      - "8080:8080"
+#    depends_on:
+#      - kafka
+#
+#  app2:
+#    build:
+#      context: ./service2
+#      dockerfile: Dockerfile
+#    image: app2
+#    container_name: app2
+#    environment:
+#      SPRING_KAFKA_BOOTSTRAPSERVERS: kafka:29092
+#    ports:
+#      - "8181:8181"
 #    depends_on:
 #      - kafka
